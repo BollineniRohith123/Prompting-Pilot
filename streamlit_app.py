@@ -38,7 +38,6 @@ st.sidebar.title("Configuration")
 
 st.title("Grompt - Prompt Optimizer")
 st.write("Grompt uses Groq's LLM services to instantly optimize prompts.")
-st.write("Developed by Rohith Bollineni")
 
 # Add tabs for Basic and Advanced modes
 tab1, tab2 = st.tabs(["Basic", "Advanced (Prompt Canvas)"])
