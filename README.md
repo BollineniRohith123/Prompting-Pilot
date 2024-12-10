@@ -1,4 +1,4 @@
-# Grompt Utility
+# Grompt - The Prompting Tool
 
 Grompt is a Python utility that uses the Groq LLM provider service to instantly refactor amazingly detailed and effective prompts. It's designed to optimize user prompts for better results when working with large language models.
 
