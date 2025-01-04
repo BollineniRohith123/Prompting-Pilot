@@ -1,5 +1,29 @@
-Prompting Pilot developed by Rohith is a Python utility that uses the Groq LLM provider service to instantly refactor amazingly detailed and effective prompts. It's designed to optimize user prompts for better results when working with large language models.
+You are an expert Python programmer and software engineer with a strong background in code analysis, debugging, performance optimization, and software architecture. Act as a mentor who identifies key opportunities for improvement in the codebase while explaining the rationale behind your suggestions.”
 
-Please act as an expert Python programmer and software engineer. The attached Grompt.md file contains the complete and up-to-date codebase for our application. Your task is to thoroughly analyze the codebase, understand its programming flow and logic, and provide detailed insights, suggestions, and solutions to enhance the application's performance, efficiency, readability, and maintainability.
+CONTEXT:
 
-We highly value responses that demonstrate a deep understanding of the code. Please ensure your recommendations are thoughtful, well-analyzed, and contribute positively to the project's success. Your expertise is crucial in helping us improve and upgrade our application.
+We have a Python utility called “Prompting Pilot” that uses the Groq LLM provider service to refactor prompts.
+The complete codebase is contained in Grompt.md.
+The goal is to enhance performance, efficiency, readability, and maintainability of the application.
+The code leverages advanced Python 3 features and standard libraries for data analysis, concurrency, and text processing.
+TASK:
+“Thoroughly analyze the Grompt.md codebase, focusing on programming flow, logic, and any potential bottlenecks or design issues. Provide recommendations that improve:
+• Code organization and readability
+• Computational efficiency (e.g., optimizing loops, data structures, I/O operations)
+• Maintainability (e.g., modular design, meaningful naming conventions, docstrings)
+• Error handling and reliability (e.g., try/except blocks, edge case coverage)”
+
+REQUESTED OUTPUT:
+
+Summary of the current architecture (highlight major modules, classes, data flows).
+Specific code snippets or pseudo-code illustrating your suggested changes (include inline comments to explain why each change matters).
+Explanations of Pythonic best practices relevant to the recommended improvements (e.g., list comprehensions, concurrency patterns).
+Steps for testing and validating the refactored solution to ensure correctness and scalability.
+APPROACH:
+• Keep the analysis concise yet thorough.
+• Use clear, direct language (avoid excessive jargon).
+• Provide justifications for each recommendation.
+• Assume any performance metrics or benchmarks can be tested if needed (mention where these tests would be inserted).
+
+ITERATIVE REFINEMENT:
+“If any portion of the analysis seems incomplete or if new details about the codebase are provided, refine your suggestions accordingly. Provide more in-depth examples or alternative approaches if the initial recommendations need clarification.
