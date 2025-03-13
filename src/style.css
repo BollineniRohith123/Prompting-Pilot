@@ -1,0 +1,391 @@
+/* Grompt - Custom CSS Styles */
+
+/* Main container */
+.main {
+    padding: 2rem;
+}
+
+/* Headers */
+.main-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #6200EA 0%, #B388FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.sub-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #5E35B1;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #6200EA;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Alert boxes */
+.success-box {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #28a745;
+}
+
+.info-box {
+    background-color: #cce5ff;
+    color: #004085;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #007bff;
+}
+
+.warning-box {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #ffc107;
+}
+
+.error-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #dc3545;
+}
+
+/* Buttons */
+.stButton button {
+    background-color: #6200EA;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stButton button:hover {
+    background-color: #3700B3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.stButton button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Comparison container */
+.comparison-container {
+    display: flex;
+    gap: 20px;
+}
+
+.comparison-column {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.comparison-column:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+    gap: 1px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #6200EA;
+    color: white;
+    box-shadow: 0 4px 8px rgba(98, 0, 234, 0.3);
+}
+
+/* Input fields */
+.stTextInput input, .stTextArea textarea, .stNumberInput input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.stTextInput input:focus, .stTextArea textarea:focus, .stNumberInput input:focus {
+    border-color: #6200EA;
+    box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+}
+
+/* Sliders */
+.stSlider [data-baseweb="slider"] {
+    height: 6px;
+}
+
+.stSlider [data-baseweb="thumb"] {
+    background-color: #6200EA;
+    border-color: #6200EA;
+    width: 20px;
+    height: 20px;
+}
+
+/* Selectbox */
+.stSelectbox [data-baseweb="select"] {
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.stSelectbox [data-baseweb="select"]:focus-within {
+    border-color: #6200EA;
+    box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    font-weight: 600;
+    color: #5E35B1;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #f0f0f0;
+}
+
+/* Progress bar */
+.stProgress > div > div > div > div {
+    background-color: #6200EA;
+}
+
+/* Dark theme overrides */
+.dark-theme .main-header {
+    background: linear-gradient(90deg, #BB86FC 0%, #03DAC6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-theme .sub-header {
+    color: #BB86FC;
+}
+
+.dark-theme .card {
+    background-color: #1e1e1e;
+    border-left: 5px solid #BB86FC;
+}
+
+.dark-theme .stButton button {
+    background-color: #BB86FC;
+    color: #000;
+}
+
+.dark-theme .stButton button:hover {
+    background-color: #03DAC6;
+}
+
+.dark-theme .stTabs [data-baseweb="tab"] {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .stTabs [aria-selected="true"] {
+    background-color: #BB86FC;
+    color: #000;
+}
+
+/* Blue theme overrides */
+.blue-theme .main-header {
+    background: linear-gradient(90deg, #1565C0 0%, #64B5F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blue-theme .sub-header {
+    color: #1976D2;
+}
+
+.blue-theme .card {
+    border-left: 5px solid #1976D2;
+}
+
+.blue-theme .stButton button {
+    background-color: #1976D2;
+}
+
+.blue-theme .stButton button:hover {
+    background-color: #1565C0;
+}
+
+.blue-theme .stTabs [aria-selected="true"] {
+    background-color: #1976D2;
+}
+
+/* Green theme overrides */
+.green-theme .main-header {
+    background: linear-gradient(90deg, #2E7D32 0%, #81C784 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.green-theme .sub-header {
+    color: #388E3C;
+}
+
+.green-theme .card {
+    border-left: 5px solid #388E3C;
+}
+
+.green-theme .stButton button {
+    background-color: #388E3C;
+}
+
+.green-theme .stButton button:hover {
+    background-color: #2E7D32;
+}
+
+.green-theme .stTabs [aria-selected="true"] {
+    background-color: #388E3C;
+}
+
+/* Purple theme overrides */
+.purple-theme .main-header {
+    background: linear-gradient(90deg, #6A1B9A 0%, #CE93D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.purple-theme .sub-header {
+    color: #7B1FA2;
+}
+
+.purple-theme .card {
+    border-left: 5px solid #7B1FA2;
+}
+
+.purple-theme .stButton button {
+    background-color: #7B1FA2;
+}
+
+.purple-theme .stButton button:hover {
+    background-color: #6A1B9A;
+}
+
+.purple-theme .stTabs [aria-selected="true"] {
+    background-color: #7B1FA2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideInUp {
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comparison-container {
+        flex-direction: column;
+    }
+    
+    .main-header {
+        font-size: 2rem;
+    }
+    
+    .sub-header {
+        font-size: 1.2rem;
+    }
+}
