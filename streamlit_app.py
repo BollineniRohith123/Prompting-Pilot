@@ -109,7 +109,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 st.sidebar.markdown('<div class="sub-header">⚙️ Configuration</div>', unsafe_allow_html=True)
 
 # Theme selector
-theme_options = ["Light", "Dark", "Blue", "Green", "Purple"]
+theme_options = ["Light", "Dark", "Blue", "Green", "Purple", "Forest"]
 selected_theme = st.sidebar.selectbox("Select Theme", theme_options, index=theme_options.index(st.session_state.theme))
 
 if selected_theme != st.session_state.theme:
