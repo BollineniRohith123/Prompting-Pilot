@@ -1,5 +1,50 @@
 /* Grompt - Custom CSS Styles */
 
+:root {
+    --primary-color: #6200EA;
+    --primary-variant-color: #3700B3;
+    --secondary-color: #03DAC6;
+    --background-color: #ffffff;
+    --surface-color: #f8f9fa;
+    --on-primary-color: #ffffff;
+    --on-background-color: #212529;
+    --on-surface-color: #212529;
+    --border-color: #e0e0e0;
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: var(--primary-color);
+    --header-gradient-end: #B388FF;
+    --sub-header-color: #5E35B1;
+    --button-text-color: var(--on-primary-color);
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #ddd;
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(98, 0, 234, 0.2);
+    --input-bg: var(--surface-color);
+    --input-text-color: var(--on-surface-color);
+    --input-hover-border-color: var(--primary-variant-color);
+    --card-shadow-color-base: rgba(0, 0, 0, 0.08);
+    --card-shadow-color-hover: rgba(0, 0, 0, 0.12);
+    --slider-track-bg: #e0e0e0;
+    --slider-thumb-bg: var(--primary-color);
+    --expander-header-bg: var(--surface-color);
+    --info-bg: #cce5ff;
+    --info-text-color: #004085;
+    --info-border-color: #007bff;
+    --success-bg: #d4edda;
+    --success-text-color: #155724;
+    --success-border-color: #28a745;
+    --warning-bg: #fff3cd;
+    --warning-text-color: #856404;
+    --warning-border-color: #ffc107;
+    --error-bg: #f8d7da;
+    --error-text-color: #721c24;
+    --error-border-color: #dc3545;
+    --expander-header-color: var(--sub-header-color);
+    --progress-bar-bg: var(--primary-color);
+}
+
 /* Main container */
 .main {
     padding: 2rem;
@@ -10,7 +55,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #6200EA 0%, #B388FF 100%);
+    background: linear-gradient(90deg, var(--header-gradient-start) 0%, var(--header-gradient-end) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -20,77 +65,77 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #5E35B1;
+    color: var(--sub-header-color);
 }
 
 /* Cards */
 .card {
     border-radius: 10px;
     padding: 1.5rem;
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--surface-color);
+    box-shadow: 0 2px 8px var(--card-shadow-color-base);
     margin-bottom: 1.5rem;
-    border-left: 5px solid #6200EA;
+    border-left: 5px solid var(--card-border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px var(--card-shadow-color-hover);
 }
 
 /* Alert boxes */
 .success-box {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: var(--success-bg);
+    color: var(--success-text-color);
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
-    border-left: 5px solid #28a745;
+    border-left: 5px solid var(--success-border-color);
 }
 
 .info-box {
-    background-color: #cce5ff;
-    color: #004085;
+    background-color: var(--info-bg);
+    color: var(--info-text-color);
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid var(--info-border-color);
 }
 
 .warning-box {
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: var(--warning-bg);
+    color: var(--warning-text-color);
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
-    border-left: 5px solid #ffc107;
+    border-left: 5px solid var(--warning-border-color);
 }
 
 .error-box {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: var(--error-bg);
+    color: var(--error-text-color);
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
-    border-left: 5px solid #dc3545;
+    border-left: 5px solid var(--error-border-color);
 }
 
 /* Buttons */
 .stButton button {
-    background-color: #6200EA;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
     font-weight: bold;
     border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .stButton button:hover {
-    background-color: #3700B3;
+    background-color: var(--primary-variant-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
@@ -110,7 +155,7 @@
     flex: 1;
     padding: 15px;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: box-shadow 0.3s ease;
 }
 
 .comparison-column:hover {
@@ -122,9 +167,9 @@
     text-align: center;
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
-    color: #666;
+    color: var(--on-background-color); /* Assuming #666 is text on background */
 }
 
 /* Tooltip */
@@ -166,41 +211,64 @@
 .stTabs [data-baseweb="tab"] {
     height: 50px;
     white-space: pre-wrap;
-    background-color: #f8f9fa;
+    background-color: var(--tab-bg);
     border-radius: 8px 8px 0 0;
     gap: 1px;
     padding: 10px 20px;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* text color for unselected tabs should be on-surface or on-background */
+    color: var(--on-surface-color);
 }
 
 .stTabs [aria-selected="true"] {
-    background-color: #6200EA;
-    color: white;
-    box-shadow: 0 4px 8px rgba(98, 0, 234, 0.3);
+    background-color: var(--tab-selected-bg);
+    color: var(--tab-selected-text-color);
+    box-shadow: 0 4px 8px var(--input-focus-shadow-color); /* Align shadow with input focus */
 }
 
 /* Input fields */
+/* Add margin to the wrapper divs for consistent spacing */
+.stTextInput, .stTextArea, .stNumberInput, .stSelectbox {
+    margin-bottom: 1rem;
+}
+
 .stTextInput input, .stTextArea textarea, .stNumberInput input {
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--input-border-color);
     padding: 10px;
-    transition: all 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: var(--input-bg);
+    color: var(--input-text-color);
 }
 
 .stTextInput input:focus, .stTextArea textarea:focus, .stNumberInput input:focus {
-    border-color: #6200EA;
-    box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 0 2px var(--input-focus-shadow-color);
+}
+
+.stTextInput input:hover, .stTextArea textarea:hover, .stNumberInput input:hover {
+    border-color: var(--input-hover-border-color);
 }
 
 /* Sliders */
+.stSlider {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem; /* Also add bottom margin for consistency if multiple sliders are stacked */
+}
+
 .stSlider [data-baseweb="slider"] {
     height: 6px;
 }
 
+/* Target the track part of the slider */
+.stSlider [data-baseweb="slider"] > div:first-child {
+    background-color: var(--slider-track-bg);
+}
+
 .stSlider [data-baseweb="thumb"] {
-    background-color: #6200EA;
-    border-color: #6200EA;
+    background-color: var(--slider-thumb-bg);
+    border-color: var(--slider-thumb-bg); /* Thumb border same as background */
     width: 20px;
     height: 20px;
 }
@@ -208,22 +276,30 @@
 /* Selectbox */
 .stSelectbox [data-baseweb="select"] {
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: var(--input-bg);
+    color: var(--input-text-color);
+    border: 1px solid var(--input-border-color);
+    width: 100%; /* Ensure the select box control itself takes full width of its stSelectbox container */
+}
+
+.stSelectbox [data-baseweb="select"]:hover {
+    border-color: var(--input-hover-border-color);
 }
 
 .stSelectbox [data-baseweb="select"]:focus-within {
-    border-color: #6200EA;
-    box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 0 2px var(--input-focus-shadow-color);
 }
 
 /* Expander */
 .streamlit-expanderHeader {
     font-weight: 600;
-    color: #5E35B1;
-    background-color: #f8f9fa;
+    color: var(--expander-header-color);
+    background-color: var(--expander-header-bg);
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    transition: all 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .streamlit-expanderHeader:hover {
@@ -232,122 +308,195 @@
 
 /* Progress bar */
 .stProgress > div > div > div > div {
-    background-color: #6200EA;
+    background-color: var(--progress-bar-bg);
 }
 
 /* Dark theme overrides */
-.dark-theme .main-header {
-    background: linear-gradient(90deg, #BB86FC 0%, #03DAC6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.dark-theme {
+    --primary-color: #BB86FC;
+    --primary-variant-color: #3700B3; /* Original dark purple, might need adjustment */
+    --secondary-color: #03DAC6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --on-primary-color: #000000;
+    --on-background-color: #ffffff;
+    --on-surface-color: #ffffff;
+    --border-color: #2e2e2e;
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: var(--primary-color);
+    --header-gradient-end: var(--secondary-color);
+    --sub-header-color: var(--primary-color);
+    --button-text-color: var(--on-primary-color); /* Text on dark theme primary button */
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #444;
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(187, 134, 252, 0.25); /* Adjusted for dark theme primary */
+    --card-shadow-color-base: rgba(255, 255, 255, 0.05);
+    --card-shadow-color-hover: rgba(255, 255, 255, 0.08);
+    --slider-track-bg: #333; /* Darker track for dark theme */
+    --slider-thumb-bg: var(--primary-color);
+    --expander-header-bg: var(--surface-color);
+    --expander-header-color: var(--primary-color);
+    --progress-bar-bg: var(--primary-color);
+    --info-bg: #003366; /* Darker blue background */
+    --info-text-color: #b3d9ff; /* Lighter blue text */
+    --info-border-color: #007bff; /* Keep border noticeable or adjust */
+    --success-bg: #0f3d1c; /* Darker green background */
+    --success-text-color: #c2f0c2; /* Lighter green text */
+    --success-border-color: #28a745;
+    --warning-bg: #664c00; /* Darker yellow/orange background */
+    --warning-text-color: #ffe5b3; /* Lighter yellow/orange text */
+    --warning-border-color: #ffc107;
+    --error-bg: #5c121b; /* Darker red background */
+    --error-text-color: #f7c6c9; /* Lighter red text */
+    --error-border-color: #dc3545;
 }
 
-.dark-theme .sub-header {
-    color: #BB86FC;
-}
-
-.dark-theme .card {
-    background-color: #1e1e1e;
-    border-left: 5px solid #BB86FC;
-}
-
-.dark-theme .stButton button {
-    background-color: #BB86FC;
-    color: #000;
-}
-
+/* Remove redundant dark theme overrides that are now handled by variables */
 .dark-theme .stButton button:hover {
-    background-color: #03DAC6;
-}
-
-.dark-theme .stTabs [data-baseweb="tab"] {
-    background-color: #1e1e1e;
-}
-
-.dark-theme .stTabs [aria-selected="true"] {
-    background-color: #BB86FC;
-    color: #000;
+    background-color: var(--secondary-color); /* Using secondary color for hover as per original dark theme */
 }
 
 /* Blue theme overrides */
-.blue-theme .main-header {
-    background: linear-gradient(90deg, #1565C0 0%, #64B5F6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.blue-theme .sub-header {
-    color: #1976D2;
-}
-
-.blue-theme .card {
-    border-left: 5px solid #1976D2;
-}
-
-.blue-theme .stButton button {
-    background-color: #1976D2;
-}
-
-.blue-theme .stButton button:hover {
-    background-color: #1565C0;
-}
-
-.blue-theme .stTabs [aria-selected="true"] {
-    background-color: #1976D2;
+.blue-theme {
+    --primary-color: #1976D2; /* Original blue */
+    --primary-variant-color: #1565C0; /* Darker blue */
+    --secondary-color: #64B5F6; /* Lighter blue accent */
+    --background-color: #e3f2fd; /* Light blue background */
+    --surface-color: #ffffff;
+    --on-primary-color: #ffffff;
+    --on-background-color: #0d47a1; /* Dark blue text on light blue background */
+    --on-surface-color: #000000;
+    --border-color: #90caf9;
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: #1565C0;
+    --header-gradient-end: #64B5F6;
+    --sub-header-color: var(--primary-variant-color);
+    --button-text-color: var(--on-primary-color);
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #90caf9;
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(25, 118, 210, 0.25);
+    --slider-thumb-bg: var(--primary-color);
+    --expander-header-bg: var(--surface-color);
+    --expander-header-color: var(--primary-variant-color);
+    --progress-bar-bg: var(--primary-color);
+    --info-border-color: var(--primary-color); /* Blue theme info border */
 }
 
 /* Green theme overrides */
-.green-theme .main-header {
-    background: linear-gradient(90deg, #2E7D32 0%, #81C784 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.green-theme .sub-header {
-    color: #388E3C;
-}
-
-.green-theme .card {
-    border-left: 5px solid #388E3C;
-}
-
-.green-theme .stButton button {
-    background-color: #388E3C;
-}
-
-.green-theme .stButton button:hover {
-    background-color: #2E7D32;
-}
-
-.green-theme .stTabs [aria-selected="true"] {
-    background-color: #388E3C;
+.green-theme {
+    --primary-color: #388E3C; /* Original green */
+    --primary-variant-color: #2E7D32; /* Darker green */
+    --secondary-color: #81C784; /* Lighter green accent */
+    --background-color: #e8f5e9; /* Light green background */
+    --surface-color: #ffffff;
+    --on-primary-color: #ffffff;
+    --on-background-color: #1b5e20; /* Dark green text on light green background */
+    --on-surface-color: #000000;
+    --border-color: #a5d6a7;
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: #2E7D32;
+    --header-gradient-end: #81C784;
+    --sub-header-color: var(--primary-variant-color);
+    --button-text-color: var(--on-primary-color);
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #a5d6a7;
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(56, 142, 60, 0.25);
+    --slider-thumb-bg: var(--primary-color);
+    --expander-header-bg: var(--surface-color);
+    --expander-header-color: var(--primary-variant-color);
+    --progress-bar-bg: var(--primary-color);
+    --success-border-color: var(--primary-color); /* Green theme success border */
 }
 
 /* Purple theme overrides */
-.purple-theme .main-header {
-    background: linear-gradient(90deg, #6A1B9A 0%, #CE93D8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.purple-theme {
+    --primary-color: #7B1FA2; /* Original purple */
+    --primary-variant-color: #6A1B9A; /* Darker purple */
+    --secondary-color: #CE93D8; /* Lighter purple accent */
+    --background-color: #f3e5f5; /* Light purple background */
+    --surface-color: #ffffff;
+    --on-primary-color: #ffffff;
+    --on-background-color: #4a148c; /* Dark purple text on light purple background */
+    --on-surface-color: #000000;
+    --border-color: #e1bee7;
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: #6A1B9A;
+    --header-gradient-end: #CE93D8;
+    --sub-header-color: var(--primary-variant-color);
+    --button-text-color: var(--on-primary-color);
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #e1bee7;
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(123, 31, 162, 0.25);
+    --slider-thumb-bg: var(--primary-color);
+    --expander-header-bg: var(--surface-color);
+    --expander-header-color: var(--primary-variant-color);
+    --progress-bar-bg: var(--primary-color);
+    --info-border-color: var(--primary-color); /* Purple theme info border */
 }
 
-.purple-theme .sub-header {
-    color: #7B1FA2;
-}
+/* Forest theme overrides */
+.forest-theme {
+    --primary-color: #2F4F2F; /* Dark Slate Gray / Deep Forest Green */
+    --primary-variant-color: #223A22; /* Darker version of primary */
+    --secondary-color: #556B2F; /* Dark Olive Green / Accent */
+    --background-color: #F0F8F0; /* Honeydew / Very Light Greenish White */
+    --surface-color: #FAFAF5; /* Slightly off-white for cards/inputs */
+    --on-primary-color: #FFFFFF; /* White text on primary */
+    --on-background-color: #3B3131; /* Dark Charcoal/Brown for text on background */
+    --on-surface-color: #3B3131; /* Dark Charcoal/Brown for text on surface */
+    --border-color: #A9A9A9; /* Dark Gray for borders */
+    --card-border-color: var(--primary-color);
+    --header-gradient-start: var(--primary-color);
+    --header-gradient-end: var(--secondary-color);
+    --sub-header-color: var(--primary-variant-color);
+    --button-text-color: var(--on-primary-color);
+    --tab-bg: var(--surface-color);
+    --tab-selected-bg: var(--primary-color);
+    --tab-selected-text-color: var(--on-primary-color);
+    --input-border-color: #8FBC8F; /* Dark Sea Green - for input borders */
+    --input-hover-border-color: var(--primary-variant-color);
+    --input-focus-border-color: var(--primary-color);
+    --input-focus-shadow-color: rgba(47, 79, 47, 0.25); /* Shadow for primary color */
+    --input-bg: var(--surface-color);
+    --input-text-color: var(--on-surface-color);
+    --slider-thumb-bg: var(--primary-color);
+    --slider-track-bg: #D3D3D3; /* Light Gray track for contrast */
+    --expander-header-bg: var(--surface-color);
+    --expander-header-color: var(--primary-variant-color);
+    --progress-bar-bg: var(--primary-color);
 
-.purple-theme .card {
-    border-left: 5px solid #7B1FA2;
-}
+    /* Alert box variables for Forest theme */
+    --info-bg: #E0EFE0; /* Lighter green for info */
+    --info-text-color: #223A22; /* Darker green text */
+    --info-border-color: var(--primary-color); /* Theme primary for info border */
 
-.purple-theme .stButton button {
-    background-color: #7B1FA2;
-}
+    --success-bg: #D9EAD3; /* Light green */
+    --success-text-color: #274E13; /* Dark green */
+    --success-border-color: #556B2F; /* Accent green */
 
-.purple-theme .stButton button:hover {
-    background-color: #6A1B9A;
-}
+    --warning-bg: #FFF8DC; /* Cornsilk / Light Yellow-Brown */
+    --warning-text-color: #8B4513; /* Saddle Brown */
+    --warning-border-color: #CD853F; /* Peru / Brownish */
 
-.purple-theme .stTabs [aria-selected="true"] {
-    background-color: #7B1FA2;
+    --error-bg: #F5E0E0; /* Light reddish-brown */
+    --error-text-color: #800000; /* Maroon */
+    --error-border-color: #A0522D; /* Sienna */
+
+    /* Card shadows for Forest theme */
+    --card-shadow-color-base: rgba(0, 0, 0, 0.07);
+    --card-shadow-color-hover: rgba(0, 0, 0, 0.1);
 }
 
 /* Animations */
@@ -387,5 +536,30 @@
     
     .sub-header {
         font-size: 1.2rem;
+    }
+
+    /* Tab adjustments for smaller screens */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 12px; /* Reduce from 24px */
+    }
+    .stTabs [data-baseweb="tab"] {
+        padding: 8px 12px; /* Reduce from 10px 20px */
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+
+    /* Button padding and font size adjustments */
+    .stButton button {
+        padding: 0.4rem 1rem; /* Reduce from 0.5rem 1.5rem */
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+
+    /* Card padding adjustments */
+    .card {
+        padding: 1rem; /* Reduce from 1.5rem */
+    }
+
+    /* Footer text size adjustments */
+    .footer {
+        font-size: 0.8rem; /* Reduce from 0.9rem */
     }
 }
